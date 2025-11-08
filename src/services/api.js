@@ -19,7 +19,7 @@ export const participantesService = {
 
     // Obtener participante por ID
     getParticipante: async (id) => {
-        const response = await api.get(`/participantes/${id}`);
+        const response = await api.get(`/participante/${id}`);
         return response.data;
     },
 

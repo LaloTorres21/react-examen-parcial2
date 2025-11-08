@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          Sistema Participantes
+          Congreso de Tecnologías de la Información
         </Link>
         
         <div className="navbar-nav">
