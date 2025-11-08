@@ -10,7 +10,7 @@ const Home = () => {
             Congreso de Tecnologías de la Información
         </h1>
         <p className='lead'>
-            Registrate para asistir al congreso de tecnologías de la información
+            Registrate para asistir al congreso de tecnologías de la Información
         </p>
         <div className='row justify-content-center mt-5 col'>
             <div className='card mb-3 col-md-5'>
