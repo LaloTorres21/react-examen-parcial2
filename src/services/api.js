@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://examenparcial2-1-wo8z.onrender.com/api';
+const API_BASE_URL = 'https://examenparcial2-1-wo8z.onrender.com/api/participantes';
 
 const api = axios.create({
     baseURL: API_BASE_URL,
