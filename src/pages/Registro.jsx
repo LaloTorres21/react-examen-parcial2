@@ -32,6 +32,7 @@ const Registro = () => {
         setError('')
 
         try{
+            console.log(formData)
             await participantesService.createParticipante(formData)
             alert('Particiante registrado exitosamente')
             navigate('/listado')

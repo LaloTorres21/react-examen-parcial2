@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://examenparcial2-1-wo8z.onrender.com/api/participantes';
+const API_BASE_URL = 'https://examenparcial2-1-wo8z.onrender.com/api';
 
 const api = axios.create({
     baseURL: API_BASE_URL,
@@ -26,6 +26,7 @@ export const participantesService = {
     // Registrat nuevo participante
     createParticipante: async (participanteData) => {
         const response = await api.post('/registro', participanteData);
+        console.log(response)
         return response.data;
     },
 };
