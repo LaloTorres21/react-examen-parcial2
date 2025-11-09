@@ -12,7 +12,7 @@ const Registro = () => {
         usuarioTwitter: '',
         ocupacion: '',
         avatar: '',
-        aceptaTerminos: false
+        AceptaTerminos: false
     })
 
     const [loading, setLoading] = useState(false)
@@ -153,13 +153,13 @@ const Registro = () => {
                         <input
                         type="checkbox"
                         className="form-check-input"
-                        id="aceptaTerminos"
-                        name="aceptaTerminos"
-                        checked={formData.aceptaTerminos}
+                        id="AceptaTerminos"
+                        name="AceptaTerminos"
+                        checked={formData.AceptaTerminos}
                         onChange={handleChange}
                         required
                         />
-                        <label className="form-check-label" htmlFor="aceptaTerminos">
+                        <label className="form-check-label" htmlFor="AceptaTerminos">
                         Acepto los términos y condiciones *
                         </label>
                     </div>
