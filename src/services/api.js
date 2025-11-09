@@ -12,20 +12,20 @@ const api = axios.create({
 export const participantesService = {
     // Obtener todos los participantes
     getParticipantes: async (query = '') => {
-        const url = query ? `/listado?q=${query}` : '/listado';
+        const url = query ? `/participantes/listado?q=${query}` : '/listado';
         const response = await api.get(url);
         return response.data;
     },
 
     // Obtener participante por ID
     getParticipante: async (id) => {
-        const response = await api.get(`/participante/${id}`);
+        const response = await api.get(`/participantes/participante/${id}`);
         return response.data;
     },
 
-    // Registrat nuevo participante
+    // Registrar participante
     createParticipante: async (participanteData) => {
-        const response = await api.post('/registro', participanteData);
+        const response = await api.post('/participantes/registro', participanteData);
         console.log(response)
         return response.data;
     },
