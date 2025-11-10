@@ -32,6 +32,9 @@ const Registro = () => {
         setError('')
 
         try{
+            console.log('Datos a enviar:', JSON.stringify(formData, null, 2)) 
+            console.log('AceptaTerminos value:', formData.AceptaTerminos) 
+            console.log('AceptaTerminos type:', typeof formData.AceptaTerminos) 
             console.log(formData)
             await participantesService.createParticipante(formData)
             alert('Particiante registrado exitosamente')
