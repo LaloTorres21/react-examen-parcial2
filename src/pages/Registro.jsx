@@ -4,6 +4,15 @@ import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 
 const Registro = () => {
+    const avatares = [
+        "https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671142.jpg",
+        "https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671126.jpg",
+        "https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671132.jpg",
+        "https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671135.jpg",
+        "https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671140.jpg",
+        "https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671143.jpg"
+    ];
+
     const navigate = useNavigate()
     const [formData, setFormData] = useState({
         nombre: '',
@@ -17,6 +26,15 @@ const Registro = () => {
 
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
+    const [avatarSeleccionado, setAvatarSeleccionado] = useState(0);
+
+    const seleccionarAvatar = (avatarUrl) => {
+        setAvatarSeleccionado(avatarUrl);
+        setFormData(prev => ({
+            ...prev,
+            avatar: avatarUrl
+        }));
+    };
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target
@@ -140,16 +158,40 @@ const Registro = () => {
                     </div>
 
                     <div className="mb-3">
-                        <label htmlFor="avatar" className="form-label">Avatar URL</label>
-                        <input
-                        type="url"
-                        className="form-control"
-                        id="avatar"
-                        name="avatar"
-                        value={formData.avatar}
-                        onChange={handleChange}
-                        placeholder="https://ejemplo.com/avatar.jpg"
-                        />
+                        <label className="form-label">
+                            Selecciona tu avatar
+                        </label>
+                        <div className='row'>
+                            {avatares.map((avatar, index) => (
+                                <div key={index} className='col-4 col-md-2 mb-3'>
+                                    <div 
+                                        className={`avatar-option ${avatarSeleccionado === avatar ? 'selected' : ''}`} 
+                                        onClick={() => seleccionarAvatar(avatar)} 
+                                        style={{cursor: 'pointer'}}
+                                    >
+                                        <img 
+                                            src={avatar} 
+                                            alt={`Avatar ${index +1}`} 
+                                            className='img-fluid rounded-circle border' 
+                                            style={{
+                                                width: '80px', 
+                                                height: '80px', 
+                                                objectFill: 'cover', 
+                                                border: avatarSeleccionado === avatar ? '3px solid #007bff' : '2px solid #dee2e6', 
+                                                opacity: avatarSeleccionado === avatar ? 1 : 0.7, 
+                                                transition: 'all 0.3s ease'}} 
+                                        />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        {avatarSeleccionado && (
+                            <div className='mt-2'>
+                                <small className='text-muted'>
+                                    Avatar Seleccionado
+                                </small>
+                            </div>
+                        )}
                     </div>
 
                     <div className="mb-3 form-check">
