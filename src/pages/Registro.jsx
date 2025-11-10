@@ -8,9 +8,12 @@ const Registro = () => {
         "https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671142.jpg",
         "https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671126.jpg",
         "https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671132.jpg",
-        "https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671135.jpg",
-        "https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671140.jpg",
-        "https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671143.jpg"
+        "https://img.freepik.com/psd-gratis/3d-ilustracion-persona-gafas_23-2149436185.jpg",
+        "https://img.freepik.com/psd-gratis/3d-ilustracion-persona_23-2149436182.jpg",
+        "https://img.freepik.com/psd-gratis/3d-ilustracion-persona-gafas_23-2149436185.jpg",
+        "https://img.freepik.com/psd-gratis/3d-ilustracion-persona_23-2149436182.jpg",
+        "https://img.freepik.com/psd-gratis/3d-ilustracion-persona_23-2149436179.jpg",
+        "https://img.freepik.com/psd-gratis/3d-ilustracion-persona_23-2149436188.jpg"
     ];
 
     const navigate = useNavigate()
