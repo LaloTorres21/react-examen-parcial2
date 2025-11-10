@@ -12,7 +12,7 @@ const api = axios.create({
 export const participantesService = {
     // Obtener todos los participantes
     getParticipantes: async (query = '') => {
-        const url = query ? `/participantes/listado?q=${query}` : '/participanteslistado';
+        const url = query ? `/participantes/listado?q=${query}` : '/participantes/listado';
         const response = await api.get(url);
         return response.data;
     },
